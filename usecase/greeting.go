@@ -23,5 +23,6 @@ func NewGreetingService(presenter GreetingPresenter) GreetingService {
 }
 
 func (s *greetingService) Hello(ctx context.Context, name string) error {
-	return s.presenter.Reply(ctx, name)
+	messsage := "hello " + name
+	return s.presenter.Reply(ctx, messsage)
 }
